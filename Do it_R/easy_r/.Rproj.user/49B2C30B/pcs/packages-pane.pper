@@ -1,0 +1,7 @@
+{
+    "installOptions": {
+        "installFromRepository": true,
+        "libraryPath": "C:/Users/duck9/OneDrive/문서/R/win-library/4.1",
+        "installDependencies": true
+    }
+}
