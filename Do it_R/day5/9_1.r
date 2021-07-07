@@ -12,6 +12,10 @@ library(readxl)
 library(ggplot2)
 library(dplyr)
 
+# Koweps 파일은 별도로 다운받기
+# https://github.com/youngwoos/Doit_R/tree/master/Data
+
+
 #데이터 부르기
 # to.data.frame = T 는 프레임 형태로 변환하는 것
 raw_welfare <- read.spss(file = "Koweps_hpc10_2015_beta1.sav",
