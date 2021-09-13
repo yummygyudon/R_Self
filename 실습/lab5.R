@@ -34,6 +34,7 @@ if(deco == 1){
 
 
 #문제 4
+?switch
 (score <- sample(0:100,1))
 (score_head <- as.character(score%/%10))
 level <- switch(EXPR = score_head,

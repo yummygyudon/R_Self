@@ -34,12 +34,16 @@ df4
 #Indexing 으로 원하는 조건값 꺼내기
 #3,4,5행만
 myemp[c(3,4,5),]
+iris[1,1]
+iris[c(1,2,3)]
 
 #4열만 빼고
 myemp[,-4]
 
 # ename열만
 myemp[,"ename"]
+iris["Sepal.Width"]
+iris$Sepal.Width
 
 # ename , sal 두 열만
 myemp[,c("ename","sal")]
@@ -58,6 +62,7 @@ myemp[myemp$job=="SALESMAN" | myemp$job=="ANALYST",c("ename","job")]
 
 myemp[is.na(myemp$comm),c("ename","sal")]
 
+iris[iris$Sepal.Width >= 3.0 & iris$Sepal.Length >= 4.0, c("Petal.Width", "Species")]
 
 ## Sort
 #특정열만 sort 가능
@@ -80,3 +85,32 @@ table(myemp$deptno)
 
 table(myemp$job)
 
+
+#######################################
+#######################################
+L1 <- list(name=c("scott"),
+           sal=c(3000))
+result1 <- unlist(L1$sal)[1] * 2
+
+
+name <- list("scott")
+sal <- list(c(100, 200, 300))
+L2 <- c(name, sal)
+
+
+L3 <- list(c(3,5,7),c("A", "B", "C"))
+L3[[2]][1] <- "Alpha"
+
+
+L4 <- list(alpha=0:4, beta=sqrt(1:5), gamma=log(1:5))
+L4$alpha <- L4$alpha +10
+L4
+
+
+L5 <- list(data1 = LETTERS,
+           data2 = L4)
+
+
+test.iris <- iris
+test.iris[c(1,5,10), 2] <- NA
+test.iris[is.na(test.iris[2]),c(1:5)]
